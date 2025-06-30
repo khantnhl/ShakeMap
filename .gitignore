@@ -1,2 +1,4 @@
 venv
 .env
+requirements.txt
+gen-lang-service-keys.json
