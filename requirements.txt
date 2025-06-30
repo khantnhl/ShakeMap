@@ -1,0 +1,12 @@
+pip.exe install google-cloud-aiplatform
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+# allow current session to run scripts in shell
+
+# activate virtual env
+.\venv\Scripts\activate 
+
+# Download the Google Cloud CLI installer on local machine and authorized user account to access
+# (New-Object Net.WebClient).DownloadFile("https://dl.google.com/dl/cloudsdk/channels/rapid/GoogleCloudSDKInstaller.exe", "$env:Temp\GoogleCloudSDKInstaller.exe")
+# & $env:Temp\GoogleCloudSDKInstaller.exe
+
+# setup service account in gcloud platform and get json for keys
