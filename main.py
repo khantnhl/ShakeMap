@@ -51,8 +51,12 @@ sf_settings = [
     ),
 ]
 
-
-
 model = GenerativeModel("gemini-2.5-flash")
-print(model.generate_content(generation_config=config, safety_settings=sf_settings, contents="What is Blue?", stream=False).text)
+# print(model.generate_content(generation_config=config, safety_settings=sf_settings, contents="What is Blue?", stream=False).text)
+
+event_record = {
+    "mag" : 7.7,
+    "latLng" : [22.011, 95.936]
+}
+
 
