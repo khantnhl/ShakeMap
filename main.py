@@ -4,6 +4,7 @@ from dotenv import load_dotenv
 from vertexai.generative_models import GenerativeModel, GenerationConfig, Image, SafetySetting, HarmCategory, HarmBlockThreshold
 from google.auth.transport.requests import Request
 from google.oauth2.service_account import Credentials
+from gcloudUtil import generate_download_signed_url_v4
 
 load_dotenv()
 
@@ -52,11 +53,12 @@ sf_settings = [
 ]
 
 model = GenerativeModel("gemini-2.5-flash")
-# print(model.generate_content(generation_config=config, safety_settings=sf_settings, contents="What is Blue?", stream=False).text)
 
 event_record = {
     "mag" : 7.7,
     "latLng" : [22.011, 95.936]
 }
+
+# print(model.generate_content(generation_config=config, safety_settings=sf_settings, contents="What is Blue?", stream=False).text)
 
 

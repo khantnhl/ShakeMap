@@ -1,0 +1,60 @@
+(1) summarizing pertinent information extracted from the input data (e.g. post time and location, potential earthquake association, shaking duration, building type, people’s reactions; 
+(2)  organizing collected visual, auditory and textual observations and evidence; 
+(3) providing an estimated MMI value; 
+(4) explaining the reasoning behind the estimation process; 
+(5) acknowledging limitations that may impact the model’s estimate. T
+
+Use the video, audio and text
+in this social media post shared by a person who felt an earthquake to estimate the intensity of
+ground shaking at its location in the MMI Scale.
+
+
+the input video/image using a one-shot prompt:
+‘Analyse the provided image/video and extract
+any information that indicates the location of
+the user or post. Identify the specific location
+name, including city, state (if applicable) and
+country. Limit your response only to the extracted
+location. Example output: Imperial, CA’
+
+
+ ‘felt by user’: ‘Yes’,
+‘class source’: ‘Surveillance Footage (YouTube)’,
+‘post location’: ‘Boonton, NJ (based on the news ticker)’,
+‘post date time’: ‘April 5, 2024 (exact time not specified)’,
+‘earthquake location’: ‘North-east U.S. (N18V)’,
+‘earthquake magnitude’: ‘4.8 (provided in video description)’,
+‘distance to earthquake epicentre’: ‘37.59 km (provided by user)’,
+‘shaking duration’: ‘Several seconds, as observed in the video footage’,
+‘building type’: ‘Coffee shop (commercial building)’,
+‘building materials’: ‘Unknown’,
+‘human reaction’: ‘Panic and fear, evident from their hurried movements, seeking cover under tables, and expressions of distress.’,
+‘animals reaction’: ‘Not visible in the video’,
+‘furnishing’: ‘Tables, chairs, light fixtures, and other typical coffee shop items’,
+‘language’: ‘English’,
+‘natural environment’: ‘Not visible in the video’,
+‘video evidence’: {
+‘Object Movement’: ‘Visible shaking of light fixtures and furniture, indicating ground movement.’,
+‘People Running and Seeking Cover’: ‘Individuals exhibiting panicked behaviour, rushing for exits, and taking cover under tables, demonstrating a perception
+of danger.’,
+‘Limited Object Falling’: ‘Some small objects may appear to be falling or displaced, but the video quality makes it difficult to ascertain the extent.’},
+‘audio evidence’: {
+‘Sounds of Distress’: ‘People expressing fear and concern, with exclamations like ‘Earthquake!’ and ‘Mommy!’’,
+‘Background Noise’: ‘General coffee shop ambiance and potential sounds of objects rattling or moving.’},
+‘textual evidence’: {
+‘Video Description’: ‘Provides information about the earthquake’s magnitude and location.’,
+‘News Overlay’: ‘Mentions tremors lasting several seconds and being felt 200 miles away, suggesting a wider impact of the earthquake.’},
+‘mmi estimation’: ‘MMI IV or MMI V’,
+‘mid mmi value numeric’: ‘4.5',
+‘estimation confidence’: ‘0.7',
+‘visual observation’: ‘The video evidence suggests moderate ground shaking, with notable movement of objects and people reacting with fear and taking cover.
+The absence of significant damage or widespread falling objects indicates that the intensity is likely not higher than MMI V.’,
+‘auditory cues’: ‘The audio evidence supports the visual observations, with people’s vocal expressions of fear and distress indicating a level of alarm consistent
+with moderate shaking.’,
+‘textual information’: ‘The video description and news overlay provide valuable context about the earthquake’s magnitude and its broader impact, reinforcing
+the assessment of moderate shaking intensity.’,
+‘analysis of evidences’: ‘The combined evidence from visual, auditory and textual sources points to an earthquake intensity in the range of MMI IV to MMI V
+at the coffee shop location. The observed effects align with the characteristics of these MMI levels, where objects move notably, people feel frightened and
+react, but significant damage is not widespread.’,
+‘reasoning’: ‘The observed effects, such as the shaking of light fixtures and furniture, people’s reactions, and the lack of major damage, are consistent with the
+descriptions of MMI IV and V. The distance from the epicentre and the earthquake’s magnitude also support this estimation.’}
