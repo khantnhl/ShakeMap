@@ -44,29 +44,27 @@ def generate_download_signed_url_v4(bucket_name, blob_name):
     print(url)
     return url
 
+from collections import deque
 def generate_object_urls(bucket_name="earthquake_bukt"):
-
-    result = []
-
+    result = deque()
     storage_client = storage.Client(credentials=get_credentials())
-
     blobs = storage_client.list_blobs(bucket_name)
 
     for blob in blobs:
-        
         if(blob.name[-1] == '/'):
             continue
-
-        print("PRINTING blob : ", blob.name)
-        # url = blob.generate_signed_url(
-        # version="v4",
-        # # This URL is valid for 15 minutes
-        # expiration=datetime.timedelta(minutes=15),
-        # # Allow GET requests using this URL.
-        # method="GET",
-        # credentials=get_credentials()
-        # )
-        # result.append(url)
+        
+        if(".jpg" in blob.name.lower()):
+            print("PRINTING blob : ", blob.name)
+            url = blob.generate_signed_url(
+            version="v4",
+            # This URL is valid for 15 minutes
+            expiration=datetime.timedelta(minutes=15),
+            # Allow GET requests using this URL.
+            method="GET",
+            credentials=get_credentials()
+            )
+            result.append(url)
         
     return result
 

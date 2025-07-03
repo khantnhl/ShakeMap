@@ -18,7 +18,7 @@ country. Limit your response only to the extracted
 location. Example output: Imperial, CA’
 
 
- ‘felt by user’: ‘Yes’,
+‘felt by user’: ‘Yes’,
 ‘class source’: ‘Surveillance Footage (YouTube)’,
 ‘post location’: ‘Boonton, NJ (based on the news ticker)’,
 ‘post date time’: ‘April 5, 2024 (exact time not specified)’,
