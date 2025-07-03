@@ -54,16 +54,17 @@ def generate_object_urls(bucket_name="earthquake_bukt"):
         if(blob.name[-1] == '/'):
             continue
         
-        if(".jpg" in blob.name.lower()):
+        if(".pdf" in blob.name.lower()):
             print("PRINTING blob : ", blob.name)
-            url = blob.generate_signed_url(
-            version="v4",
-            # This URL is valid for 15 minutes
-            expiration=datetime.timedelta(minutes=15),
-            # Allow GET requests using this URL.
-            method="GET",
-            credentials=get_credentials()
-            )
+            url = f"gs://{bucket_name}/{blob.name}"
+            # # url = blob.generate_signed_url(
+            # # version="v4",
+            # # # This URL is valid for 15 minutes
+            # # expiration=datetime.timedelta(minutes=15),
+            # # # Allow GET requests using this URL.
+            # # method="GET",
+            # # credentials=get_credentials()
+            # # )
             result.append(url)
         
     return result
