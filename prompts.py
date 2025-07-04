@@ -1,8 +1,10 @@
-location_prompt = """Analyse the provided image/video and extract any information that indicates the location of the user or post. 
-                Identify the specific location name, including city, state (if applicable) and country. 
-                Limit your response only to the extracted location. Example output: Imperial, CA"""
+location_prompt="""
+                    Analyse the provided image/video and extract any information that indicates the location of the user or post. 
+                    Identify the specific location name, including city, state (if applicable) and country. 
+                    Limit your response only to the extracted location. Example output: Imperial, CA
+                """
 
-output_prompt =  """
+output_prompt = """
 Generate a JSON output based on the analysis of the provided image/video and any accompanying textual information.
 The JSON output MUST strictly follow this exact structure and keys:
 
