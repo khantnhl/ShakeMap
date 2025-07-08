@@ -40,26 +40,28 @@ result = []
 for i, url in enumerate(signed_urls):
     print(f"Processing {i + 1} :")
 
-    context_for_gemini = [
-    location_prompt,
-    output_prompt   
-    ]
-    
-    # determine mime type
-    mimeType = None
-    if(".jpg" in url.lower()):
-        mimeType = "image/jpg"
-    elif("mp4" in url.lower()):
-        mimeType = "video/mp4"
-
-    if(mimeType):
-        context_for_gemini.append(Part.from_uri(url, mime_type=mimeType))
-    else:
-        raise TypeError("Invalid FileType Object")
+    if(i == 0): 
+        context_for_gemini = [
+        location_prompt,
+        output_prompt   
+        ]
+        
+        # determine mime type
+        mimeType = None
+        if(".jpg" in url.lower()):
+            mimeType = "image/jpg"
+        elif(".mp4" in url.lower()):
+            mimeType = "video/mp4"
+        elif(".pdf" in url.lower()):
+            mimeType = "application/pdf"
+        if(mimeType):
+            context_for_gemini.append(Part.from_uri(url, mime_type=mimeType))
+        else:
+            raise TypeError("Invalid FileType Object")
 
     try: 
         response = model.generate_content(
-                    generation_config=geminiConfig, 
+                    generation_config=config, 
                     safety_settings=sf_settings, 
                     contents=context_for_gemini,    
                     stream=False
@@ -70,7 +72,7 @@ for i, url in enumerate(signed_urls):
     except Exception as e:
         print(f"{e}")
         
-print(result)
+        print(result[0])
 
 
 # To-Do Tasks
