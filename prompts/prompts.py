@@ -4,6 +4,7 @@ location_prompt="""
                     Limit your response only to the extracted location. Example output: Imperial, CA
                 """
 
+# Few-Shot Prompting
 output_prompt = """
 Generate a JSON output based on the analysis of the provided image/video and any accompanying textual information.
 The JSON output MUST strictly follow this exact structure and keys:
@@ -46,5 +47,21 @@ The JSON output MUST strictly follow this exact structure and keys:
     "textual information": "Detailed explanation of textual cues supporting MMI.",
     "analysis of evidences": "Comprehensive analysis combining all evidence types.",
     "reasoning": "Explanation for the MMI estimation based on all observations."
+}
+"""
+
+# Chain-Of-Thought
+tablePrompt = """
+You are an expert image analyzer. For the given image, do the following:
+
+1. Describe everything you can see in the image in rich detail in one long sentence.
+2. If any location information is visible (e.g., street signs, popular buildings), infer and extract it.
+3. If there's no explicit text showing a location, give your best guess based on visual clues.
+
+Strictly Return the output in the following format:
+
+{
+    "description": <Full detailed description",
+    "location" : <inferred location or Unknown>
 }
 """

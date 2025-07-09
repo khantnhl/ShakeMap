@@ -61,7 +61,7 @@ for i, url in enumerate(signed_urls):
 
     try: 
         response = model.generate_content(
-                    generation_config=config, 
+                    generation_config=geminiConfig, 
                     safety_settings=sf_settings, 
                     contents=context_for_gemini,    
                     stream=False

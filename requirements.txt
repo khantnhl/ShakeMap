@@ -5,6 +5,8 @@ Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
 # activate virtual env
 .\venv\Scripts\activate 
 
+pip install llama-index llama-index-vector-stores-vertexaivectorsearch llama-index-llms-vertex
+pip install llama-index-readers-gcs
 # Download the Google Cloud CLI installer on local machine and authorized user account to access
 # (New-Object Net.WebClient).DownloadFile("https://dl.google.com/dl/cloudsdk/channels/rapid/GoogleCloudSDKInstaller.exe", "$env:Temp\GoogleCloudSDKInstaller.exe")
 # & $env:Temp\GoogleCloudSDKInstaller.exe
