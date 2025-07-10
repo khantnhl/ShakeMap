@@ -1,0 +1,19 @@
+MMI Intensity 1 (Not felt) Not felt by people. Marginal and long-period effects of large earthquakes at large distances, such as feeling of dizziness or nausea, waves in large bodies of water.
+
+MMI Intensity 2 (Weak) Felt only by some persons at rest, on upper floors, or otherwise “favorably placed.”
+
+MMI Intensity 3 (Weak) Felt by many indoors. Hanging objects swing. Vibration like passing of light trucks. Duration estimated. May not be recognized as an earthquake.
+
+MMI Intensity 4 (Light) Felt by most indoors. Hanging objects swing. Vibration like passing of heavy truck, or sense of jolt like heavy ball striking the walls. Standing vehicles rock. Windows, dishes, and doors rattle. Glasses and crockery clashes. In upper range of 4, wooden walls and house frames creak.
+
+MMI Intensity 5 (Moderate) Felt outdoors. Some people estimate direction of shaking. Sleepers awakened. Liquids disturbed, some spilled from open containers. Small, unstable objects moved or overturned. Doors swing open and closed. Shutters and pictures move. Pendulum clocks start, stop, or change rate.
+
+MMI Intensity 6 (Strong) Felt by all. Many frightened and run outdoors. People walk unsteadily. Windows, dishes, glassware broken. Knickknacks, books, etc, fall from shelves. Pictures fall from walls. Furniture moved or overturned. Weak plaster and masonry D cracked. Small bells ring. Trees, bushes shaken visibly. Building contents : Some items thrown from shelves, pictures shifted, water thrown from pools. Masonry buildings show the following damage: some walls and parapets of poorly constructed buildings crack. One or two-story wood frame buildings may develop some drywall cracks. Multi-family wood frame buildings experience some chimney damage, drywall cracks, and slight cracking in slab foundations, patios, or garage floors.
+
+MMI Intensity 7 (Very Strong) Difficult to stand. Noticed by drivers of motor cars. Furniture broken. Damage to masonry D, including cracks. Weak chimneys broken at roof line. Fall of plaster, loose bricks, stones, tiles, cornices, unbraced parapets and other architectural elements. Some cracks in masonry C. At this intensity, many items are thrown from walls and shelves. Furniture shifts. Poorly constructed masonry buildings are damaged and some well-constructed buildings crack. Cornices and unbraced parapets fall. One or two-story wood frame homes may show plaster cracks, especially at inside corners. Some soft-story buildings strain at the first floor level, and some partitions deform. Multi-family wood frame buildings may have many broken chimneys and some collapses, causing damage to roofs, interiors, and porches. Weak foundations can also be damaged.
+
+MMI Intensity 8 (Severe Shaking) Nearly everything is thrown down from shelves, cabinets, and walls. Furniture overturned. Poorly constructed buildings suffer partial or full collapse. Some well constructed buildings aredamaged. Unreinforced walls fall. Soft-story buildings are displaced out of plumb and partially collapse. Loose partition walls are damaged and may fail. Some pipes break. Unbolted houses shift off the foundation, or partially collapse if cripple walls are not braced. Structural elements (e.g. beams, joists, and foundations) are damaged. Some pipes break.
+
+MMI Intensity 9 (Violent Shaking) Only very well anchoredcontents remain in place. Poorly constructed buildings collapse. Well constructed buildings are heavily damaged. Retrofitted buildings damaged. Soft-story buildings partially or completely collapse. Some well constructed buildings are damaged. Poorly constructed buildings are heavily damaged, some partially collapse. Some well constructed buildings are damaged.
+
+MMI Intensity 10 (Extreme Shaking) Only very well anchored contents remain in place. Retrofitted buildings are heavily damaged, and some partially collapse. Many well constructed buildings are damaged. Well constructed buildings are damaged.
