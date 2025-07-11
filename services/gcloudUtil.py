@@ -44,9 +44,10 @@ def generate_download_signed_url_v4(bucket_name, blob_name):
     print(url)
     return url
 
-def generate_object_urls(bucket_name="earthquake_bukt"):
+def generate_object_urls(bucket_name="earthquake_bukt", credentials=get_credentials()):
+    
     result = []
-    storage_client = storage.Client(credentials=get_credentials())
+    storage_client = storage.Client(credentials=credentials)
     blobs = storage_client.list_blobs(bucket_name)
 
     for blob in blobs:
@@ -54,17 +55,17 @@ def generate_object_urls(bucket_name="earthquake_bukt"):
             continue
         
         if(".pdf" in blob.name.lower()):
-            # print("PRINTING blob : ", blob.name)
+            print(blob.name)
             # url = f"gs://{bucket_name}/{blob.name}"
-            url = blob.generate_signed_url(
-            version="v4",
-            # This URL is valid for 15 minutes
-            expiration=datetime.timedelta(minutes=15),
-            # Allow GET requests using this URL.
-            method="GET",
-            credentials=get_credentials()
-            )
-            result.append(url)
+            # url = blob.generate_signed_url(
+            #     version="v4",
+            #     # This URL is valid for 15 minutes
+            #     expiration=datetime.timedelta(minutes=15),
+            #     # Allow GET requests using this URL.
+            #     method="GET",
+            #     credentials=get_credentials()
+            #     )
+            # result.append(url)
         
     return result
 
