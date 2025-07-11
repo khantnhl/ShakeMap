@@ -17,13 +17,30 @@ if credentials.expired:
     credentials.refresh(Request())
 
 vertexai.init(project=projectID, location='us-central1', credentials=credentials)
-model = GenerativeModel("gemini-2.5-flash")
 
-# mandalay
-event_record = {
-    "mag" : 7.7,
-    "latLng" : [22.011, 95.936]
-}
+def get_model():
+    global model_init
+    if(not model_init):
+        model_init = GenerativeModel("gemini-2.5-flash")
+    return model_init
+
+def get_response(contents: list):
+
+    model = get_model()
+    response = model.generate_content(
+                    generation_config=geminiConfig, 
+                    safety_settings=sf_settings, 
+                    contents=contents,    
+                    stream=False
+                    )
+        
+    return response.text
+
+# # mandalay
+# event_record = {
+#     "mag" : 7.7,
+#     "latLng" : [22.011, 95.936]
+# }
 
 # OUTPUT Prompts 
 from prompts.prompts import location_prompt, output_prompt
@@ -69,8 +86,3 @@ for i, url in enumerate(signed_urls):
         print(f"{e}")
         
         print(result[0])
-
-
-# To-Do Tasks
-# generate intensities 
-# with known locations from Steer Report

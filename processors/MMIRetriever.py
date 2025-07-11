@@ -15,15 +15,15 @@ class MMIRetriever:
     """
     def __init__(self):
         self.EMBEDDING_MODEL_NAME = "gemini-embedding-001"
-        self.DIMENSIONALITY = 3072
+        self.DIMENSIONALITY = 1024
         self.spec = ServerlessSpec(cloud="aws", region="us-east-1")
-        self.index_name = "mmi-gemini-index"
+        self.index_name = "mmi-idx"
         self.pc = Pinecone(api_key=os.environ['PINECONE_API'])
         self.index = self.pc.Index(self.index_name)
 
-    def createIndex(self, indexName : str) -> None:
-        if indexName not in self.pc.list_indexes().names():
-            self.pc.create_index(indexName, self.spec, dimension=3072, metric="cosine")
+    def createIndex(self) -> None:
+        if self.index_name not in self.pc.list_indexes().names():
+            self.pc.create_index(self.index_name, self.spec, dimension=self.DIMENSIONALITY, metric="cosine")
             logger.info("Indexing Completed.")
             return
         logger.info("Index Exists..")
@@ -45,12 +45,15 @@ class MMIRetriever:
 
         return embeddings
     
-    def indexing(self, embeddings, docs):
+    def indexing(self, docsPath : str):
         """ Indexing to PineCone VectorStore """
 
+        docsFromPath = self.load_texts_from_file(docsPath)
+        embeddings = self.embed_text(docsFromPath, "RETRIEVAL_DOCUMENT")
+
         items_to_insert = [
-            (f"mmi-{i}", embedding, {"text": text})
-            for i, (embedding, text) in enumerate(zip(embeddings, docs))
+            (f"mmi-{i+1}", embedding, {"text": text})
+            for i, (embedding, text) in enumerate(zip(embeddings, docsFromPath))
         ]
 
         self.index.upsert(vectors=items_to_insert)
