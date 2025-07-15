@@ -67,9 +67,7 @@ def generate_object_urls(bucket_name, credentials):
                 credentials=get_credentials()
                 )
             
-            print("here")
             result.append(url)
-            print("append")
             break
 
     return result
