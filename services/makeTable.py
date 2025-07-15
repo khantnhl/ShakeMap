@@ -40,8 +40,11 @@ bigquery_client = bigquery.Client(project="gen-lang-client-0175492774", credenti
 table_schema = [
     bigquery.SchemaField("blob_name", "STRING", description="FileName"),
     bigquery.SchemaField("gemini_description", "STRING", description="Detailed description"),
-    bigquery.SchemaField("location", "STRING", description="inferred location")
+    bigquery.SchemaField("address", "STRING", description="inferred address"),
+    bigquery.SchemaField("coordinates", "FLOAT64", mode="REPEATED", description="coordinates"),
+    bigquery.SchemaField("mmi", "STRING", mode="REPEATED", description="inferred mmi")
 ]
+
 
 datasetID = "gen-lang-client-0175492774.earthquake_dataset"
 try: 
@@ -64,45 +67,43 @@ except:
     print(f"Created {table.table_id}")
 
 try: 
-    image_urls = generate_object_urls()
+    image_urls = generate_object_urls("earthquake_bukt", get_credentials())
     print("Status: Generated Object Signed URLs")
+    print(image_urls)
 except:
     print("Error generating signed urls")
-# print(image_uris)
+
 insertRows = []
 
+from processors.multimodalroutes import multimodalRouter
+from processors.MMIRetriever import MMIRetriever
+
+modalRouter = multimodalRouter()
+mmi_retriever = MMIRetriever()
+
 for i, url in enumerate(image_urls):
-    if(i>=10):
-        break
+    # returns dict {description and location}
+    response = modalRouter.get_type_and_generate(url)
+    Obj = json.loads(response)
+    print(Obj)
+
+    mmi = mmi_retriever.retrieve(Obj['description'])
+    
 
     print(f"Processing {i}")
 
-    image = Part.from_uri(url, mime_type='application/pdf')
-    
-    contents = [image, tablePrompt]
-    response = model.generate_content(
-                    generation_config=geminiConfig, 
-                    safety_settings=sf_settings, 
-                    contents=contents,    
-                    stream=False
-                    )
-    description = response.text
-    print(f"Description {i}: ", description)
-
-    try: 
-        parsedJSON = json.loads(response.text)
-        description = parsedJSON["description"]
-        location = parsedJSON["location"]
-    except:
-        description = response.text
-        location = "Unknown"
-
+    parsedJSON = json.loads(response)
+    description = parsedJSON["description"]
+    address = parsedJSON["location"]["address"]
+    coords = parsedJSON["location"]["coordinates"]
 
     insertRows.append({"blob_name" : adjustURL(url), 
                       "gemini_description" : description,
-                      "location" : location
+                      "address" : address,
+                      "coordinates" : coords,
+                      "mmi" : mmi
                     })
-
+    print("row print: ", insertRows)
 if(insertRows):
     print("Inserting to BigQuery Table")
     

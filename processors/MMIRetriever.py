@@ -74,7 +74,13 @@ class MMIRetriever:
 
         # search in PineCone VectorStore
         results = self.index.query(vector=embed_query, top_k=3, include_metadata=True)
-
+        
+        results = self.retrieve_mmi(results)
         return results
 
-    
+    def retrieve_mmi(self, input):
+        result = []
+        for record in input['matches']:
+            result.append(record['id'])
+
+        return result
