@@ -12,7 +12,6 @@ def get_model():
         return GenerativeModel("gemini-2.5-flash")
 
 def get_response(contents: list):
-
     model = get_model()
     response = model.generate_content(
                     generation_config=geminiConfig, 

@@ -81,8 +81,10 @@ class MMIRetriever:
     def retrieve_mmi(self, input):
         result = []
         for record in input['matches']:
-            result.append(int(record['id'][-1]))
+            print(record['id'].split("-"))
+            score = record['id'].split("-")[-1]
+            result.append(int(score))
         
-        print(result)
-        mmi_mean = sum(result)/len(result)
-        return mmi_mean
+        # mmi_mean = round(sum(result)/len(result), 1)
+        return result
+

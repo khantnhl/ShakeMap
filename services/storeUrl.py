@@ -39,12 +39,8 @@ bigquery_client = bigquery.Client(project="gen-lang-client-0175492774", credenti
 
 table_schema = [
     bigquery.SchemaField("blob_name", "STRING", description="FileName"),
-    bigquery.SchemaField("gemini_description", "STRING", description="Detailed description"),
-    bigquery.SchemaField("address", "STRING", description="inferred address"),
-    bigquery.SchemaField("coordinates", "FLOAT64", mode="REPEATED", description="coordinates"),
-    bigquery.SchemaField("mean_mmi", "STRING", description="inferred mmi")
+    bigquery.SchemaField("signed_url", "STRING", description="url")
 ]
-
 
 datasetID = "gen-lang-client-0175492774.earthquake_dataset"
 try: 
@@ -56,7 +52,8 @@ except:
     dataset = bigquery_client.create_dataset(dataset)
     print(f"Dataset Created..")
 
-tableID = "gen-lang-client-0175492774.earthquake_dataset.image_descriptions"
+tableID = "gen-lang-client-0175492774.earthquake_dataset.url_table"
+# tableID = "gen-lang-client-0175492774.earthquake_dataset.image_descriptions"
 
 try:
     table = bigquery_client.get_table(tableID)
@@ -69,7 +66,7 @@ except:
 try: 
     urls = generate_object_urls("earthquake_bukt", get_credentials())
     print("Status: Generated Object Signed URLs")
-    print(urls[65])
+
 except:
     print("Error generating signed urls")
 
@@ -81,35 +78,15 @@ from processors.MMIRetriever import MMIRetriever
 modalRouter = multimodalRouter()
 mmi_retriever = MMIRetriever()
 
-
-# for i, url in enumerate(urls):
-#     # returns dict {description and location}
-#     response = modalRouter.get_type_and_generate(url)
-#     Obj = json.loads(response)
-#     print(Obj)
-
-#     mmi = mmi_retriever.retrieve(Obj['description'])
+try: 
+    for i, url in enumerate(urls):
+        
+        print(f"Processing : {i}")
+        insertRows.append({"blob_name" : adjustURL(url), 
+                        "signed_url" : url
+                        })
     
-
-#     print(f"Processing {i}")
-
-#     parsedJSON = json.loads(response)
-#     description = parsedJSON["description"]
-#     address = parsedJSON["location"]["address"]
-#     coords = parsedJSON["location"]["coordinates"]
-
-#     insertRows.append({"blob_name" : adjustURL(url), 
-#                       "gemini_description" : description,
-#                       "address" : address,
-#                       "coordinates" : coords,
-#                       "mean_mmi" : mmi
-#                     })
-#     print("row print: ", insertRows)
-# if(insertRows):
-#     print("Inserting to BigQuery Table")
-    
-#     try:
-#         bigquery_client.insert_rows_json(tableID, insertRows)
-#         print("Successfully Inserted..")
-#     except Exception as e:
-#         print("No data to insert..")
+    bigquery_client.insert_rows_json(tableID, insertRows)
+    print("Successfully Inserted..")
+except:
+    raise RuntimeError("Failed to Insert to table..")
