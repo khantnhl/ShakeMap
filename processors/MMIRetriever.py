@@ -3,6 +3,7 @@ import logging
 from pinecone import Pinecone, ServerlessSpec
 from vertexai.language_models import TextEmbeddingInput, TextEmbeddingModel
 from dotenv import load_dotenv
+from langchain.schema import Document
 
 load_dotenv()
 
@@ -77,7 +78,22 @@ class MMIRetriever:
         
         results = self.retrieve_mmi(results)
         return results
+        
+    def retrieveDocs(self, query : str):
+        if(not query):
+            logger.error("Empty Query")
 
+        embed_query = self.embed_text([query], task="RETRIEVAL_QUERY")[0]
+
+        # search in PineCone VectorStore
+        docs = self.index.query(vector=embed_query, top_k=3, include_metadata=True)
+        results = []
+        
+        for record in docs['matches']:
+            doc = Document(page_content=record['metadata']['text'])
+            results.append(doc)
+        return results
+    
     def retrieve_mmi(self, input):
         result = []
         for record in input['matches']:

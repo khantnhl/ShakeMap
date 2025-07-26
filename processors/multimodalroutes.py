@@ -21,6 +21,8 @@ schemas = [
     ResponseSchema(name="reasoning", description="Step-by-step reasoning for MMI"),
     ResponseSchema(name="confidence", description="Confidence score from 0.0 to 1.0")
 ]
+
+# define the output schema
 parser = StructuredOutputParser.from_response_schemas(schemas)
 
 class multimodalRouter:
@@ -49,12 +51,18 @@ class multimodalRouter:
         Description_Prompt = f"""
             <System Prompt>
             You are an expert seismologist, studying earthquake impact using the Modified Mercalli Intensity Scale (MMI). 
-            Your task is to carefully analyze image or video evidence to identify visual and auditory indicators of shaking intensity.
+            Your task is to carefully analyze image or video evidence to identify visual and auditory indicators of seismic shaking.
+            Avoid making assumptions or what is not visible or audible in the media. Carefully analyze and describe the contents of the image or video in detail.
             </System Prompt>
 
-            Describe the contents of the image or video in detail.
+            For images 
+                - Look for visible surface damage, collapsed buildings, cracks, dust clouds, displaced infrastructure.
+                - If it's a satellite or aerial view, analyze top-down damage: roof collapses, ruptured roads, debris zones, or displaced land features.
+            For videos
+                - Detect dynamic events such as shaking lights, falling debris, swaying structures, ground rupture, or displacement.
+                - Audio may be absent but it does not mean there is no earthquake
+                - If audio is present, analyze for screams, panic, structural sounds (crashing, creaking).
             Your response must be a valid JSON object containing the following fields:
-
             {{
                 "blob_name": "{blob_name}",
                 "description": "Detailed textual description of damages and casualties in the image/video.",
@@ -86,7 +94,7 @@ class multimodalRouter:
         (4) Explain your reasoning;
         (5) Note model limitations.
 
-        Your response must follow this format:
+        Your response MUST follow this schema exactly:
         {format_instructions}
         """
         secondcontents = [Part.from_text(secondPrompt), Part.from_text(firstResponse)]

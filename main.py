@@ -50,17 +50,16 @@ for row in rows:
 print("size: ", len(signed_urls))
 print("size: ", len(image_without_location))
 print("size: ", len(video_urls))
+
 modalRouter = multimodalRouter()
 
 # signed_url is tuple (blob_name, signedurl)
-for i, url in enumerate(image_without_location):
+for i, url in enumerate(video_urls):
 
-    response = modalRouter.get_type_and_generate(url[0], url[1])
-    
-    print(f"Processing {i}")
-
-    with open("temp.json", "a") as f:
-        f.write(json.dumps(response, indent=4) + ",\n")
+        response = modalRouter.get_type_and_generate(url[0], url[1])
+        print(f"Processing {i}")
+        with open("temp.json", "a") as f:
+            f.write(json.dumps(response, indent=4) + ",\n")
 
 
 print("Done")

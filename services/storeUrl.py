@@ -72,11 +72,6 @@ except:
 
 insertRows = []
 
-from processors.multimodalroutes import multimodalRouter
-from processors.MMIRetriever import MMIRetriever
-
-modalRouter = multimodalRouter()
-mmi_retriever = MMIRetriever()
 
 try: 
     for i, url in enumerate(urls):
