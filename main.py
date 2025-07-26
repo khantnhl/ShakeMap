@@ -4,8 +4,16 @@ from dotenv import load_dotenv
 from vertexai.generative_models import GenerativeModel, Part
 from google.auth.transport.requests import Request
 from google.oauth2.service_account import Credentials
-from services.gcloudUtil import generate_download_signed_url_v4, generate_object_urls
-from config.gemini_config import geminiConfig, sf_settings
+from google.cloud import bigquery
+import sys
+import json
+
+sys.path.append(os.path.join(os.path.dirname(__file__), 'services'))
+sys.path.append(os.path.join(os.path.dirname(__file__), 'processors'))
+from processors.multimodalroutes import multimodalRouter
+from services.credentialUtils import get_credentials
+from services.gcloudUtil import generate_object_urls
+from manage_model import get_response
 
 load_dotenv()
 
@@ -17,60 +25,41 @@ if credentials.expired:
     credentials.refresh(Request())
 
 vertexai.init(project=projectID, location='us-central1', credentials=credentials)
-model = GenerativeModel("gemini-2.5-flash")
 
-# mandalay
-event_record = {
-    "mag" : 7.7,
-    "latLng" : [22.011, 95.936]
-}
+client = bigquery.Client(project=projectID)
 
-# OUTPUT Prompts 
-from prompts.prompts import location_prompt, output_prompt
+query = """
+    SELECT *
+    FROM `gen-lang-client-0175492774.earthquake_dataset.url_table`
+"""
 
-# queue
-signed_urls = generate_object_urls()
+rows = client.query_and_wait(query)  # Make an API request.
 
-result = []
+signed_urls = []
+video_urls = []
+image_without_location = []
 
-for i, url in enumerate(signed_urls):
-    print(f"Processing {i + 1} :")
+for row in rows:
+    if("pdf" in row["signed_url"]):
+        signed_urls.append((row["blob_name"], row["signed_url"]))
+    elif("jpg" in row["signed_url"] or "jpeg" in row["signed_url"]):
+        image_without_location.append((row["blob_name"], row["signed_url"]))
+    elif("mp4" in row["signed_url"]):
+        video_urls.append((row["blob_name"], row["signed_url"]))
 
-    if(i == 0): 
-        context_for_gemini = [
-        location_prompt,
-        output_prompt   
-        ]
-        
-        # determine mime type
-        mimeType = None
-        if(".jpg" in url.lower()):
-            mimeType = "image/jpg"
-        elif(".mp4" in url.lower()):
-            mimeType = "video/mp4"
-        elif(".pdf" in url.lower()):
-            mimeType = "application/pdf"
-        if(mimeType):
-            context_for_gemini.append(Part.from_uri(url, mime_type=mimeType))
-        else:
-            raise TypeError("Invalid FileType Object")
+print("size: ", len(signed_urls))
+print("size: ", len(image_without_location))
+print("size: ", len(video_urls))
 
-    try: 
-        response = model.generate_content(
-                    generation_config=geminiConfig, 
-                    safety_settings=sf_settings, 
-                    contents=context_for_gemini,    
-                    stream=False
-                    )
-        
-        # print(f"{i+1} Output : {response.text}")
-        result.append(response.text)
-    except Exception as e:
-        print(f"{e}")
-        
-        print(result[0])
+modalRouter = multimodalRouter()
+
+# signed_url is tuple (blob_name, signedurl)
+for i, url in enumerate(video_urls):
+
+        response = modalRouter.get_type_and_generate(url[0], url[1])
+        print(f"Processing {i}")
+        with open("temp.json", "a") as f:
+            f.write(json.dumps(response, indent=4) + ",\n")
 
 
-# To-Do Tasks
-# generate intensities 
-# with known locations from Steer Report
+print("Done")

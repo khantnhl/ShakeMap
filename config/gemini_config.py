@@ -17,20 +17,20 @@ geminiConfig= GenerationConfig(
 
 sf_settings = [
     SafetySetting(
-        category=HarmCategory.HARM_CATEGORY_DANGEROUS_CONTENT,
-        threshold=HarmBlockThreshold.BLOCK_LOW_AND_ABOVE,
-    ),
-    SafetySetting(
         category=HarmCategory.HARM_CATEGORY_HARASSMENT,
-        threshold=HarmBlockThreshold.BLOCK_LOW_AND_ABOVE,
+        threshold=HarmBlockThreshold.BLOCK_NONE,
     ),
     SafetySetting(
         category=HarmCategory.HARM_CATEGORY_HATE_SPEECH,
-        threshold=HarmBlockThreshold.BLOCK_LOW_AND_ABOVE,
+        threshold=HarmBlockThreshold.BLOCK_NONE,
     ),
     SafetySetting(
         category=HarmCategory.HARM_CATEGORY_SEXUALLY_EXPLICIT,
-        threshold=HarmBlockThreshold.BLOCK_LOW_AND_ABOVE,
+        threshold=HarmBlockThreshold.BLOCK_NONE,
     ),
+    SafetySetting(
+        category=HarmCategory.HARM_CATEGORY_DANGEROUS_CONTENT,
+        threshold=HarmBlockThreshold.BLOCK_NONE,
+    )
 ]
 

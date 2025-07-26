@@ -2,7 +2,7 @@
 (2)  organizing collected visual, auditory and textual observations and evidence; 
 (3) providing an estimated MMI value; 
 (4) explaining the reasoning behind the estimation process; 
-(5) acknowledging limitations that may impact the model’s estimate. T
+(5) acknowledging limitations that may impact the model’s estimate. 
 
 Use the video, audio and text
 in this social media post shared by a person who felt an earthquake to estimate the intensity of
@@ -58,3 +58,47 @@ at the coffee shop location. The observed effects align with the characteristics
 react, but significant damage is not widespread.’,
 ‘reasoning’: ‘The observed effects, such as the shaking of light fixtures and furniture, people’s reactions, and the lack of major damage, are consistent with the
 descriptions of MMI IV and V. The distance from the epicentre and the earthquake’s magnitude also support this estimation.’}
+
+<System Prompt>
+    You are expert Seismologist
+<System Prompt>
+
+<MMI Definitions> 
+    Here
+</MMI Definitions>
+
+<OutputFormat>
+</OutputFormat>
+
+1. user input image/video
+
+2. # first prompt 
+    Ask LLM to describe what is happening, extract visual, audio cues analysis
+
+3. MMI definitions (semantic search)
+# second prompt 
+
+secondStep = """
+Given this description, 
+    (1) summarize pertinent information extracted from the input data for example potential earthquake association, shaking duration, building type, people’s reactions; 
+    (2) organize collected visual, auditory and textual observations and evidence; 
+    (3) provide an estimated MMI value; 
+    (4) explain the reasoning behind the estimation process step-by-step; 
+    (5) acknowledging limitations that may impact the model’s estimate. 
+
+    Your response must be a valid JSON object containing the following fields:
+    {
+        Given description,
+        "context_summary" : "Summary of all the provided context and evidences",
+        "mmi_estimation" : "Estimated MMI value",
+        "reasoning" : "Explain your reasoning here"
+    }
+"""
+
+4. Ask LLM to rewrite query 
+# query decomposition
+
+5. final prompt
+* mmi_estimation :
+* reasoning : 
+* estimation_confidence :  
