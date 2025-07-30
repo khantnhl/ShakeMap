@@ -408,3 +408,6 @@ if __name__ == "__main__":
         mime_type="application/pdf")
     
     print(result["generation"])
+    with open("sample_test.txt", 'w') as f:
+        f.write(result["generation"])
+

@@ -1,4 +1,4 @@
-{
+[{
     "blob_name": "page1.pdf",
     "description": "The image, derived from video screenshots, depicts severe damage in Sagaing city, Myanmar, consistent with significant seismic activity. Multiple buildings are either partially or fully collapsed, with debris strewn across the street. There is clear evidence of ground deformation, specifically an apparent surface fault rupture indicated by a right-lateral offset of a red and white curb. The scene shows extensive structural failure and widespread rubble, suggesting a powerful earthquake event.",
     "location": {
@@ -4757,4 +4757,224 @@
             10
         ]
     ]
+},    {
+    "blob_name": "J3GDPgZVw_g_uYeY.mp4",
+    "description": "The video captures the dramatic partial collapse of a multi-story building, which leans precariously and sheds significant debris and dust onto the street. People are seen reacting with alarm, running away from the collapsing structure and shouting. The street is covered in dust and rubble, indicating severe structural failure. No apparent casualties are visible in the immediate aftermath, but the extent of the damage suggests a high potential for injuries or fatalities.",
+    "location": {
+        "address": "Mandalay City, Myanmar",
+        "coordinates": [
+            0.0,
+            0.0
+        ]
+    },
+    "auditory_cues": "The audio features loud crashing and crumbling sounds as the building collapses. People are heard shouting in alarm and distress, speaking in Burmese, indicating panic and urgency.",
+    "background_noise": "The primary background noise transitions from general street sounds to the overwhelming sounds of a collapsing building, followed by shouts and exclamations from onlookers.",
+    "sounds_of_distress": "People are heard shouting words like 'Taik-gyi pyo-ja!' (Building collapsing!) and other distressed exclamations, indicating fear and the immediate recognition of a dangerous event.",
+    "visual_observation": "The most prominent visual element is a multi-story building, primarily red and white with balconies, undergoing a partial collapse. It leans significantly to one side, with sections of its structure breaking apart and falling. A large cloud of dust billows from the collapsing structure, obscuring parts of the scene. Debris, including what appears to be concrete, metal railings, and other building materials, is scattered across the street and sidewalk. Several individuals are seen running away from the collapsing building, and one person walks towards it, seemingly observing the damage. An adjacent, taller white building appears to be intact, though its proximity to the damaged structure is concerning. A silver SUV is parked on the street, seemingly undamaged.",
+    "video_evidence": "The key visual evidence confirming seismic activity is the dynamic and rapid partial collapse of the multi-story building. The immediate generation of a large dust cloud and the scattering of heavy debris across the street are direct indicators of severe structural failure caused by intense shaking.",
+    "building_type": "The collapsing building appears to be a multi-story residential or mixed-use commercial/residential building. The adjacent, intact building also appears to be a multi-story commercial or residential structure.",
+    "building_materials": "The collapsing building shows evidence of concrete construction, particularly in its structural elements and balconies, with what appears to be red and white exterior finishes, possibly stucco or tile. The adjacent building appears to be constructed of concrete with a tiled or textured facade.",
+    "evidence_analysis": "The combined evidence from visual and auditory sources strongly indicates a severe earthquake intensity. The partial collapse of a multi-story building, characterized by significant structural failure, leaning, and the generation of a large dust cloud, along with the panicked reactions and shouts of people, points to a Modified Mercalli Intensity (MMI) of VIII (Severe) to IX (Violent). An MMI VIII would involve 'considerable damage in ordinary substantial buildings with partial collapse,' while MMI IX would involve 'great damage in substantial buildings, with partial collapse.' The observed damage, particularly the dramatic leaning and breaking apart of the structure, aligns with these higher intensity levels, suggesting a very strong and destructive earthquake.",
+    "context_summary": "A multi-story building in Mandalay City, Myanmar, undergoes a dramatic partial collapse, leaning precariously and shedding significant debris and dust. Loud crashing and crumbling sounds accompany the event, while people are heard shouting in distress and panic, running away from the collapsing structure. The street is covered in rubble, indicating severe structural failure and a high potential for casualties. The building appears to be of concrete construction. This event signifies a very strong and destructive seismic impact.",
+    "mmi_estimation": 8.5,
+    "reasoning": "The MMI estimation of 8.5 is based on the clear evidence of a dramatic partial collapse and significant leaning of a multi-story building, which indicates severe structural failure. This level of damage goes beyond 'considerable damage' (MMI VIII) and approaches 'great damage' (MMI IX) in substantial buildings. The loud crashing sounds and the panicked reactions of people, including shouting and running away, further corroborate a high-intensity event where the shaking was felt with extreme force and caused immediate, life-threatening damage. The observed damage aligns closely with the descriptions for MMI VIII, particularly the 'partial collapse' aspect, but the extent of the leaning and breaking apart pushes it towards the upper end of VIII or lower end of IX, thus 8.5 is a reasonable mid-point.",
+    "confidence": 0.9,
+    "mmi_semantic": [
+        [
+            8,
+            10,
+            9
+        ]
+    ]
 },
+{
+    "blob_name": "TbEu7e10nofUnsqQ.mp4",
+    "description": "The video depicts the aftermath of a significant seismic event, showing a severely damaged multi-story building with large sections collapsed into rubble. Rescue workers in orange uniforms and hard hats are actively engaged in extricating individuals from the debris. Several people, including some who appear to be injured or in shock, are being assisted away from the collapsed structure. Extensive concrete and rebar debris are scattered across the ground. A sign with 'WE \u2764\ufe0f AUNG RAM' is visible in a wider shot, suggesting a commercial establishment. A crowd of onlookers is gathered on the street.",
+    "location": {
+        "address": "Unknown",
+        "coordinates": [
+            0.0,
+            0.0
+        ]
+    },
+    "auditory_cues": "The audio primarily consists of human voices, likely people speaking in Burmese, possibly coordinating rescue efforts or reacting to the scene. There are no distinct sounds of distress like screams or panic, nor are there sounds of active collapse, as the event appears to have already occurred.",
+    "background_noise": "Human voices, general outdoor ambiance, and sounds associated with a crowd and rescue operations.",
+    "sounds_of_distress": "No explicit sounds of distress such as screams or cries are clearly discernible in the provided audio.",
+    "visual_observation": [
+        "Severely collapsed multi-story building structure",
+        "Extensive rubble consisting of concrete, rebar, and other building materials",
+        "Rescue workers in orange uniforms and hard hats",
+        "Individuals being assisted out of the debris",
+        "Damaged air conditioning units visible on the side of the remaining structure",
+        "A commercial sign 'WE \u2764\ufe0f AUNG RAM'",
+        "Crowd of onlookers/affected individuals on the street",
+        "A pickup truck parked on the street",
+        "Dust and debris covering the ground"
+    ],
+    "video_evidence": "The video clearly shows the catastrophic structural failure of a multi-story building, with large sections having completely collapsed. The presence of rescue workers actively engaged in extrication confirms a post-disaster scenario, highly consistent with a major earthquake causing significant structural damage.",
+    "building_type": "Likely a commercial or mixed-use multi-story building, possibly a restaurant or shop given the visible sign.",
+    "building_materials": "Predominantly reinforced concrete (visible rebar and concrete slabs), possibly with masonry infill.",
+    "evidence_analysis": "The combined visual evidence of a completely collapsed multi-story building, extensive rubble, and active rescue operations points to an extremely high Modified Mercalli Intensity (MMI) level. This level of damage, where structures are completely destroyed and lives are endangered, is consistent with MMI VIII (considerable damage in ordinary substantial buildings, great damage in poorly built structures, partial collapse of well-built structures) or more likely MMI IX (general panic, general damage to foundations, some well-built structures thrown out of plumb, serious damage to reservoirs, underground pipes broken, ground conspicuously cracked) or even MMI X (most masonry and frame structures destroyed with their foundations, some well-built wooden structures and bridges destroyed, serious damage to dams, dikes, and embankments, large landslides, water thrown on banks of canals, rivers, lakes, etc., sand and mud shifted horizontally on beaches and flat land). The scene depicts widespread and severe structural failure, indicating very strong to violent ground shaking.",
+    "context_summary": "The video captures the severe aftermath of a significant seismic event, focusing on a multi-story building, likely commercial and constructed of reinforced concrete, which has suffered catastrophic collapse into extensive rubble. Active rescue operations are underway, with uniformed workers extricating individuals, indicating a post-disaster scenario with potential casualties. The audio primarily consists of human voices, likely coordinating efforts, and general crowd ambiance, with no distinct sounds of ongoing collapse or distress. The visual evidence strongly points to extreme structural failure, consistent with very strong ground shaking.",
+    "mmi_estimation": 9.5,
+    "reasoning": "The MMI estimation of 9.5 is based on the catastrophic structural failure of a multi-story building, which has completely collapsed into extensive rubble. This level of damage, involving the total destruction of a substantial building and requiring active rescue operations, far exceeds the 'partial collapse' described for MMI VIII. It aligns with the severe damage and foundation issues implied by MMI IX, and approaches the 'most masonry and frame structures destroyed' criteria of MMI X, even if only one building is explicitly shown. The presence of rescue workers and the visible debris field confirm a major seismic event causing widespread and severe structural failure, indicating extremely violent ground shaking. The lack of active shaking or sounds of distress suggests the video captures the aftermath, but the extent of damage is a direct consequence of the seismic intensity.",
+    "confidence": 0.9,
+    "mmi_semantic": [
+        [
+            8,
+            9,
+            10
+        ]
+    ]
+},
+{
+    "blob_name": "d6aJnDofxr16HTFO.mp4",
+    "description": "The video captures the demolition of a large building, characterized by a significant dust cloud and the progressive collapse of its structure. People on the street react to the sudden event by running and observing.",
+    "location": {
+        "address": "Bangsue Junction, Bangkok, Thailand",
+        "coordinates": [
+            13.8052,
+            100.5401
+        ]
+    },
+    "auditory_cues": "Loud crashing and rumbling sounds consistent with a building collapse are audible, accompanied by human exclamations and general street noise.",
+    "background_noise": "General traffic sounds, human voices, and the distinct sounds of a large structure collapsing.",
+    "sounds_of_distress": "People are heard exclaiming and reacting with alarm, consistent with a sudden, loud, and large-scale event like a building demolition. Some shouts are heard as people run.",
+    "visual_observation": "A multi-story building is seen collapsing from the top down, generating a massive, opaque dust cloud that expands rapidly. People on the street are observed reacting to the event, with many running away from the direction of the collapse, while others stop to watch. No visible ground shaking, structural swaying of surrounding buildings, or cracks on adjacent structures are observed. Traffic continues to move, albeit with some disruption due to human movement.",
+    "video_evidence": "The primary visual evidence is the controlled, progressive collapse of a large building and the resulting large dust plume. The collapse appears to be an intentional demolition rather than an earthquake-induced failure, as there are no signs of ground shaking, swaying of other structures, or widespread damage typical of seismic activity. The dust cloud is localized to the collapsing structure.",
+    "building_type": "Large commercial or multi-story building, possibly part of a complex or mall, identified by 'Bangsue Junction' signage.",
+    "building_materials": "Based on the nature of the collapse and the dust generated, the building appears to be constructed from reinforced concrete and possibly steel, common for large urban structures.",
+    "evidence_analysis": "The video clearly depicts a building demolition, not an earthquake. The collapse is localized to one structure, and the manner of collapse (top-down, progressive) along with the massive dust cloud is characteristic of controlled demolition. There are no visual or auditory indicators of ground shaking, widespread structural damage, or other phenomena associated with an earthquake. Therefore, the Modified Mercalli Intensity Scale is not applicable to this event as it is not an earthquake. The human reactions observed are consistent with alarm due to a sudden, loud, and visually impactful demolition event rather than seismic activity.",
+    "context_summary": "The video captures a large building demolition at Bangsue Junction, Bangkok, characterized by a progressive top-down collapse and a massive dust cloud. Loud crashing sounds and human exclamations are audible. People on the street react with alarm, running or stopping to observe. There is no evidence of ground shaking, structural swaying of surrounding buildings, or widespread damage typical of an earthquake, indicating an intentional demolition.",
+    "mmi_estimation": 0.0,
+    "reasoning": "The event depicted is clearly identified as a building demolition, not an earthquake. Key indicators include the localized nature of the collapse, the top-down progressive failure characteristic of controlled demolition, the absence of ground shaking, and the lack of structural damage to surrounding buildings. Human reactions are consistent with alarm from a sudden, loud, and visually impactful event rather than seismic fear. Since the Modified Mercalli Intensity (MMI) scale measures earthquake intensity based on observed effects, and this event is not an earthquake, an MMI value of 0.0 is assigned, indicating no perceptible earthquake motion.",
+    "confidence": "1.0",
+    "mmi_semantic": [
+        [
+            8,
+            9,
+            10
+        ]
+    ]
+},
+{
+    "blob_name": "dTi5B_kHYoajNhKg.mp4",
+    "description": "The video shows the immediate aftermath of a significant structural collapse, likely due to an earthquake. A multi-story building has suffered a partial collapse, with large sections of its upper floors caved in, creating a massive pile of rubble at its base. Rescue workers in orange suits and hard hats are actively engaged in extricating individuals from the debris and assisting them to safety. Several civilians are also present, some assisting, others observing the scene. The overall scene depicts widespread destruction to the affected building and an urgent rescue operation.",
+    "location": {
+        "address": "Aung Ban, Shan State, Myanmar",
+        "coordinates": [
+            20.65,
+            96.65
+        ]
+    },
+    "auditory_cues": "The audio primarily consists of human voices, including shouts and urgent communication, likely between rescue workers and those being rescued or bystanders. The tone of the voices indicates a serious and chaotic situation, consistent with a disaster response.",
+    "background_noise": "The predominant background noise is human speech and general commotion from the rescue efforts. There are no distinct sounds of active collapse, but the overall soundscape is one of urgency and activity.",
+    "sounds_of_distress": "While no explicit screams or cries of panic are clearly discernible, the urgent and loud vocalizations from multiple individuals suggest a high level of distress and the critical nature of the situation.",
+    "visual_observation": "Visible elements include a partially collapsed multi-story building, extensive rubble composed of broken concrete slabs, bricks, and twisted rebar. Numerous rescue workers in uniform are seen assisting people out of the collapsed structure. Civilians are also present, some appearing disoriented or injured, others observing. A wider shot shows a street with debris, people gathered, and a sign in the background reading 'WE \u2764\ufe0f AUNG BAN', indicating the location. Power lines and other intact structures are visible in the background, suggesting localized severe damage.",
+    "video_evidence": "The most compelling visual evidence of seismic activity is the catastrophic failure of the multi-story building, resulting in a partial collapse and a large debris field. The presence of organized rescue operations further confirms a significant disaster event, consistent with a powerful earthquake causing severe structural damage.",
+    "building_type": "The affected building appears to be a multi-story commercial or mixed-use structure, given its size and typical urban construction.",
+    "building_materials": "The visible debris clearly shows reinforced concrete (slabs, columns) and brick masonry, with exposed rebar, indicating a concrete frame with brick infill construction.",
+    "evidence_analysis": "The combined evidence from the visual observation of a partially collapsed multi-story building, extensive rubble, and active rescue operations strongly indicates a very high Modified Mercalli Intensity (MMI) level. Such severe structural damage, including the collapse of ordinary substantial buildings, is characteristic of MMI VIII (Severe) or MMI IX (Violent) earthquakes. The localized nature of the most severe damage (one building collapsed, others nearby seemingly intact in the wider shot) might suggest specific structural vulnerabilities or proximity to the epicenter/fault, but the intensity at the point of collapse is undoubtedly high.",
+    "context_summary": "The scene in Aung Ban, Myanmar, depicts the immediate aftermath of a severe structural collapse, likely due to an earthquake. A multi-story concrete and brick building has suffered a partial collapse, creating a massive pile of rubble. Rescue workers are actively engaged in extrication efforts amidst urgent human voices and general commotion. The visual evidence of significant structural failure and the auditory cues of a chaotic, urgent rescue operation strongly indicate a major disaster.",
+    "mmi_estimation": 8.5,
+    "reasoning": "The MMI estimation is 8.5 (Severe) based on the clear visual evidence of a partial collapse of an ordinary substantial multi-story building. According to the Modified Mercalli Intensity (MMI) scale, MMI VIII (Severe) is characterized by 'considerable damage in ordinary substantial buildings with partial collapse.' The video explicitly shows this level of destruction, with large sections of the building caved in and extensive rubble. While the damage is severe, there is no visual evidence of structures being thrown out of plumb, buildings shifted off foundations, or significant ground cracking, which would typically indicate MMI IX (Violent) or higher. The urgent auditory cues and the presence of organized rescue efforts further confirm a major disaster consistent with MMI VIII. The extent of structural failure observed aligns most closely with the criteria for MMI VIII.",
+    "confidence": "0.9",
+    "mmi_semantic": [
+        [
+            8,
+            10,
+            9
+        ]
+    ]
+},
+{
+    "blob_name": "f9I_JrSLymsb68ll.mp4",
+    "description": "The video depicts multiple severe incidents of structural failure in an urban environment. One segment shows a tall, modern high-rise building with a massive volume of water cascading down its exterior from a high floor, accompanied by the apparent collapse or severe damage of a large construction crane adjacent to it. Another segment captures the rapid, progressive collapse of a multi-story building, generating a huge dust cloud and scattering debris. Construction workers are seen fleeing the collapsing structure in panic. The events suggest significant and sudden structural distress.",
+    "location": {
+        "address": "Unknown",
+        "coordinates": [
+            0.0,
+            0.0
+        ]
+    },
+    "auditory_cues": "The audio evidence includes distinct sounds of human distress, such as screams, shouts of alarm, and exclamations of surprise or fear. Sounds of structural failure, including crashing and breaking, are audible during the crane incident and the building collapse.",
+    "background_noise": "General urban background noise, including distant traffic sounds and human voices. The dominant background sound during the incidents is the noise of collapsing structures and human reactions.",
+    "sounds_of_distress": "People are heard screaming and shouting in alarm, with clear exclamations of distress and panic in response to the unfolding events.",
+    "visual_observation": "Visible elements include a tall, modern high-rise building with extensive water flow down its facade, a large construction crane in a state of collapse or severe damage, and a multi-story building undergoing a complete and rapid structural collapse. Large plumes of dust and debris are generated by the collapsing building. Individuals, identified as construction workers by their attire, are seen running away from the collapsing structure. Other urban buildings, roads, and street furniture are visible in the background.",
+    "video_evidence": "Key visual cues confirming severe structural events include the dynamic collapse of a construction crane, the massive cascade of water from a high-rise building suggesting a major system failure or rupture, and the complete and rapid disintegration of a multi-story building. The widespread debris and dust clouds, along with the immediate and panicked flight of individuals, strongly indicate a sudden and catastrophic event. While the video does not explicitly show ground shaking, the observed structural failures are consistent with the effects of severe seismic activity.",
+    "building_type": "High-rise residential/commercial building (the one with water cascade), and a multi-story building, possibly under construction or being demolished (the one that collapses).",
+    "building_materials": "The high-rise building appears to be constructed with modern materials, including glass curtain walls and concrete. The collapsing building shows evidence of concrete and possibly steel construction, with debris including what appears to be concrete slabs and rebar.",
+    "evidence_analysis": "The combined visual and auditory evidence points to catastrophic structural failures. The rapid collapse of the crane and the multi-story building, along with the extensive water discharge from another high-rise, are indicative of extreme forces acting upon these structures. The scale of destruction and the immediate, panicked reactions of people suggest a sudden and highly destructive event. If caused by an earthquake, these effects would correspond to a very high Modified Mercalli Intensity (MMI) level, likely MMI VIII (Destructive) or higher, where specially designed structures are significantly damaged, and ordinary substantial buildings suffer great damage with partial collapse. The water cascade could imply the rupture of large water tanks or piping systems due to severe shaking.",
+    "context_summary": "The video captures multiple severe structural failures in an urban setting, including the complete and rapid collapse of a multi-story building, the collapse of a large construction crane, and a massive water discharge from a high-rise. Accompanying these visuals are sounds of structural destruction and human distress, with individuals seen fleeing in panic. The events indicate a sudden, catastrophic force at play.",
+    "mmi_estimation": 10.0,
+    "reasoning": "1.  **Data Summary:** The video depicts extreme structural damage, including the complete and rapid collapse of a multi-story building, severe damage or collapse of a large construction crane, and a massive water cascade from a high-rise. Human reactions are characterized by immediate panic, screaming, and fleeing. The duration of the destructive events appears rapid and sudden. Shaking duration cannot be directly observed but is implied by the instantaneous nature of the collapses.\n2.  **Evidence Organization:**\n    *   **Visual Evidence:** Rapid, progressive collapse of a multi-story building; collapse/damage of a large construction crane; massive water cascade from a high-rise; large dust clouds and debris; panicked individuals fleeing.\n    *   **Auditory Evidence:** Sounds of crashing and breaking structures; human screams, shouts of alarm, and exclamations of fear.\n    *   **Textual Evidence (from description):** \"multiple severe incidents of structural failure,\" \"rapid, progressive collapse,\" \"huge dust cloud,\" \"scattering debris,\" \"construction workers fleeing in panic.\"\n3.  **MMI Estimation (MMI 10.0):** The observed effects are consistent with Modified Mercalli Intensity (MMI) X (Extreme).\n4.  **Reasoning for MMI X:** MMI X is characterized by the destruction of most masonry and frame structures with their foundations. The video clearly shows the *complete and rapid collapse* of a multi-story building, which goes beyond the \"partial collapse\" or \"considerable damage\" associated with MMI VIII or IX. The additional evidence of a large construction crane collapsing and a massive water system failure in a high-rise further supports an extreme level of ground motion and structural stress. The immediate and widespread panic among people is also indicative of a catastrophic event of this magnitude.\n5.  **Model Limitations:** This MMI estimation is based solely on interpreting visual and auditory cues from a video. The model cannot confirm the actual cause of the structural failures (e.g., if it was indeed an earthquake, or a demolition, or another type of structural failure). The MMI scale is designed to assess earthquake effects, and applying it without confirmed seismic activity is an assumption. The video might be edited, or the events could be staged. Direct measurement of ground motion is not possible from the provided data. Therefore, this is an assessment of the *observed effects* as if they were caused by an earthquake, rather than a definitive statement about the cause.",
+    "confidence": "0.9",
+    "mmi_semantic": [
+        [
+            8,
+            9,
+            10
+        ]
+    ]
+},
+{
+    "blob_name": "sGCL2ojjrIx7gXFc.mp4",
+    "description": "The video captures the dramatic collapse of a tall building, which appears to be a controlled demolition rather than an earthquake event. The collapse generates a massive dust cloud that engulfs the surrounding area. People are seen fleeing from the dust and debris. There is no visual evidence of ground rupture, widespread structural damage to other buildings, or prolonged seismic shaking. The event is localized to the single collapsing structure.",
+    "location": {
+        "address": "Unknown",
+        "coordinates": [
+            0.0,
+            0.0
+        ]
+    },
+    "auditory_cues": "The audio includes distinct sounds of structural collapse, shattering glass, and loud impacts as the building disintegrates. Human voices express alarm, shock, and fear, with exclamations in Thai that translate to phrases like 'Hey, hey, the top is swaying!' (likely an observation just before the main collapse), 'Holy shit!', and 'What the hell is this?!' These vocalizations are consistent with witnessing a sudden, catastrophic event.",
+    "background_noise": "General ambient sounds, human voices, and the escalating sounds of a large structure collapsing.",
+    "sounds_of_distress": "People are heard shouting in surprise and fear, reacting to the immediate and violent collapse of the building. Their exclamations indicate a high level of alarm and urgency to escape the immediate vicinity of the falling debris and dust cloud.",
+    "visual_observation": "The video initially shows a tall, multi-story building under construction, with a concrete frame and partial glass cladding. The top section of the building begins to collapse inwards, followed rapidly by the entire structure disintegrating from top to bottom. A large, dense cloud of dust and pulverized material erupts and expands outwards, obscuring the view of the collapsed building. Debris, including what appears to be glass panels, is seen falling. People on the street are observed running away from the advancing dust cloud.",
+    "video_evidence": "Key visual cues include the rapid, progressive, and contained collapse of a single building, which is characteristic of a planned demolition. The immediate and massive dust cloud, the shattering of glass, and the absence of any visible shaking or damage to adjacent structures or the ground strongly suggest a demolition event rather than an earthquake. The movement of the crane at the top of the building also appears to be part of the demolition process, not seismic activity.",
+    "building_type": "High-rise building under construction (likely commercial or mixed-use).",
+    "building_materials": "Reinforced concrete (visible frame), glass (facade), and scaffolding/netting.",
+    "evidence_analysis": "The combined evidence from visual and auditory sources overwhelmingly indicates that the event captured in the video is a building demolition, not an earthquake. The collapse is localized to a single structure, occurs rapidly from top to bottom, and generates a large dust cloud typical of controlled implosions. There are no signs of ground shaking, widespread structural damage to surrounding buildings, or other phenomena associated with seismic activity. Therefore, the Modified Mercalli Intensity (MMI) scale is not applicable to describe the impact of this event, as it is not an earthquake.",
+    "context_summary": "The video documents the rapid, top-down collapse of a single tall building, generating a massive dust cloud and causing people to flee. Auditory cues include loud structural disintegration, shattering glass, and alarmed human exclamations in Thai. Visual evidence shows a building under construction, its controlled-like collapse, and no signs of ground shaking or damage to adjacent structures. This evidence strongly suggests a planned demolition rather than an earthquake.",
+    "mmi_estimation": 0.0,
+    "reasoning": "The Modified Mercalli Intensity (MMI) scale is specifically designed to measure the effects of an earthquake. Based on the comprehensive visual and auditory evidence, the event depicted is clearly a building demolition, not an earthquake. Key indicators include the localized, top-down collapse of a single structure, the absence of ground shaking, and no damage to surrounding buildings. Since the event is not seismic in nature, the MMI scale is not applicable, and therefore, an MMI value cannot be assigned. The value of 0.0 is used to denote this non-applicability.",
+    "confidence": 1.0,
+    "mmi_semantic": [
+        [
+            8,
+            9,
+            7
+        ]
+    ]
+},
+{
+    "blob_name": "the%20Super%20Shear%20Mandalay%20EarthquakeValuable%20Recorded%20quotSuper%20Shear%20Mandalay%20Earthquake28th%20March%202025quot%20in%20Thapyay%20Wa%20Solar%20Firm%20from%20our%20losses...%20%20By%20Htin.mp4",
+    "description": "The video displays an outdoor scene of what appears to be the entrance to a facility. There are no visible damages, collapses, cracks, dust clouds, or displaced infrastructure. The primary event observed is the automated opening of a large metal gate. No casualties are visible.",
+    "location": {
+        "address": "Thapyay Wa Solar Firm, Mandalay, Myanmar",
+        "coordinates": [
+            0.0,
+            0.0
+        ]
+    },
+    "auditory_cues": "None present in the video.",
+    "background_noise": "None present in the video.",
+    "sounds_of_distress": "None present in the video.",
+    "visual_observation": "The video shows a concrete driveway leading to a large, black metal gate. The gate is composed of two sections, which slowly open outwards. To the left and right of the driveway are landscaped areas with grass and various plants. In the background, beyond the gate, there is open, undeveloped land with some scattered structures, possibly prefabricated cabins, and power transmission towers visible in the distance. The sky is clear. No shaking of objects, cracked walls, crowds, or smoke are observed. The date and time '2025-03-28 12:46:24' are displayed in the upper right corner.",
+    "video_evidence": "The video does not contain any visual cues that confirm seismic activity. There is no evidence of shaking lights, falling debris, swaying structures, ground rupture, or displacement. The opening of the gates appears to be a controlled, automated action, not a result of seismic forces.",
+    "building_type": "Industrial/Commercial (entrance to a solar firm facility, with prefabricated cabins visible in the background).",
+    "building_materials": "The main entrance structure appears to be constructed from concrete and possibly some form of cladding. The gate is made of metal. The prefabricated cabins in the background are of undetermined material but likely light construction.",
+    "evidence_analysis": "Based solely on the visual and auditory content of this video, there is no direct evidence to suggest seismic activity or earthquake impact. The observed action of the gates opening is consistent with a normal operational function rather than a response to shaking. Without any observable shaking, damage, or auditory cues, it is not possible to assign a Modified Mercalli Intensity (MMI) level based on this video evidence alone. The filename mentions an earthquake, but the video itself does not provide supporting visual or auditory data for such an event.",
+    "context_summary": "The video depicts an outdoor scene at the entrance of a solar firm. A large metal gate is observed opening automatically. Crucially, there are no visible damages, structural collapses, cracks, dust clouds, or displaced infrastructure. No shaking of objects, walls, or any signs of crowds or smoke are present. Auditory cues, background noise, and sounds of distress are entirely absent. The video provides no visual or auditory evidence indicative of seismic activity, such as shaking lights, falling debris, swaying structures, ground rupture, or displacement. The gate's opening is clearly a controlled, automated operation, not a consequence of seismic forces.",
+    "mmi_estimation": 1.0,
+    "reasoning": "Based solely on the visual and auditory information presented in the video, there is no evidence of an earthquake. No shaking of objects or structures is observed, nor are there any signs of damage, distress, or sounds typically associated with seismic activity. The only event captured is the automated opening of a gate, which is a normal operational function. Therefore, the Modified Mercalli Intensity (MMI) is estimated at I (Not felt), indicating no perceptible effects of an earthquake.",
+    "confidence": "1.0",
+    "mmi_semantic": [
+        [
+            5,
+            8,
+            6
+        ]
+    ]
+    }
+]
